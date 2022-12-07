@@ -2,7 +2,7 @@
 
 /* Template Name: Options */
 
-$colors = get_field("choose_a_color");
+$color = get_field("choose_a_color");
 
 get_header();
 ?>
@@ -13,7 +13,17 @@ get_header();
 
                 <h1><?php the_title(); ?></h1>
 
-                <?php echo implode($colors, ","); ?>
+                <?php if($color): ?>
+                    <strong>Color:</strong><?php echo $color['value']; ?>
+                <?php endif; ?>
+
+                <br> <br>
+
+                <?php switch($color['label']) {
+                    case 'Green':
+                        echo 'Success! The color is green :)'; 
+                    break;
+                };?>
     </div>
 </section>
 
