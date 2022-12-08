@@ -83,7 +83,7 @@ function custom_post_type()
     "exclude_from_search" => false,
     "menu_icon" => "dashicons-admin-users",
   ];
-  register_post_type("team-members", $args);
+  register_post_type("team", $args);
 
   $labels_1 = [
     "name" => "Locations",
